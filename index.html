@@ -13,222 +13,81 @@
     <div id="relogio"></div>
 
     <script>
-       /* var nome ='leonardo';
+   
+   /*
+        let diaNascimento = prompt("Digite o dia do nascimento (DD): ");
+        let mesNascimento = prompt("Digite o mês do nascimento (MM): ");
+        let anoNascimento = prompt("Digite o ano do nascimento (AAAA): ");
 
-        nome ='joão'
-
-        {
-            let endereço ='Rua José barbosa';
-            console.log(endereço)
-        }
-            */
-
-
-            /*
-            var nome = 'Leonardo';
-            var nome2 = 'Fernandes';
-            var idade = 21;
-            var outraVariavel = true;
-            var texto = 'o nome é '+nome+' Ele tem '+idade+ ' anos de idade';
-
-            window.alert(texto)
-
-            */
-        
-        /*
-            //Arrays
-            var nome = ['leonardo', 'lorena', 'marcos']
-            nome.push('Teresa')
-
-            console.log(nome[3])
-
-            */
-
-            var nome ='Leonardo';
-            var idade = 21;
-
-
-            /*
-            if(nome == 'jão'){
-                console.log('verdadeiro')
-            }else{
-                console.log('entramos no else')
-            }
-
-            if(idade > 100){
-                console.log('este numero é maior ou igual a 21')
-            }else if(idade <= 21){
-                console.log('este numero é menor')
-            }
-                */
-
-            /*Sinal de != diferente
-            
-                if(nome != 'leonardo'){
-                console.log('entrou')
-            }   
-
-            Sinal de && e o sinal de ||
-            quando se usa o sinal de && todas as variaveis devem estar corretas na verificação 
-            quando se usa || significa ou, no caso da verificação de duas variaveis se houver somente uma correta ja estará valido
-*/
-           
-/*if(nome != 'Leonardo' || idade == 21){
-                console.log('verdade')
-            }else if(nome == 'Leonardo'){
-                console.log('verdade')
-            
-            }*/
-
-           
-
-/*
-let day;
-switch (new Date().getDay()) {
-  case 0:
-    day = "Sunday";
-    break;
-  case 1:
-    day = "Monday";
-    break;
-  case 2:
-    day = "Tuesday";
-    break;
-  case 3:
-    day = "sua bunda";
-    break;
-  case 4:
-    day = "Thursday";
-    break;
-  case 5:
-    day = "Friday";
-    break;
-  case  6:
-    day = "Saturday";
-}
-document.getElementById("demo").innerHTML = "Today is " + day;
-
-*/
-
-
-/*
-const d = new Date();
-document.getElementById("demo").innerHTML = d;
- */
-
- /*
-        function testes(){
-            console.log('tua mae me adora')
+        while (isNaN(diaNascimento) || isNaN(mesNascimento) || isNaN(anoNascimento)) {
+          alert("Erro! Você deve digitar apenas números.");
+          diaNascimento = prompt("Digite o dia do nascimento (DD): ");
+          mesNascimento = prompt("Digite o mês do nascimento (MM): ");
+          anoNascimento = prompt("Digite o ano do nascimento (AAAA): ");
         }
 
-        function testes2(nome, idade2){
-            console.log('o nome que foi passado é '+nome)
-            console.log('a idade é '+idade2)
-        }
-*/
-
-
-        /*
-        function novoNome(par){
-            if(par == 1){
-            return 'Leonardo';
-            }else{
-                return 'falhou'
-            }
-            
+        while (diaNascimento < 1 || diaNascimento > 31 || mesNascimento < 1 || mesNascimento > 12 || anoNascimento < 1900 || anoNascimento > 2022) {
+          alert("Erro! Data de nascimento inválida.");
+          diaNascimento = prompt("Digite o dia do nascimento (DD): ");
+          mesNascimento = prompt("Digite o mês do nascimento (MM): ");
+          anoNascimento = prompt("Digite o ano do nascimento (AAAA): ");
         }
 
-        var nome = novoNome(10);
-        console.log(nome)
+        let dataNascimento = new Date(anoNascimento, mesNascimento - 1, diaNascimento);
+        let dataAtual = new Date();
+        let idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
+
+        if (dataAtual.getMonth() < dataNascimento.getMonth() || (dataAtual.getMonth() === dataNascimento.getMonth() && dataAtual.getDate() < dataNascimento.getDate())) {
+          idade--;
+        }
+
+        if (idade < 6 || idade > 140) {
+          alert("Erro! Idade inválida.");
+        } else {
+          alert(`A pessoa tem ${idade} anos.`);
+        }
+
         */
-        /*
-        var func = function(){
-            alert('sua mãe gosta do grosso')
-        }
-
-        func();
-        */
-       /*
-       (function(){
-        alert('ola mundo')
-       })();
-
-       */
-
-       function atualizarHora() {
-  const dataAtual = new Date();
-  const hora = dataAtual.getHours();
-  const minuto = dataAtual.getMinutes();
-  const segundo = dataAtual.getSeconds();
-
-  const horaFormatada = `${hora < 10 ? '0' + hora : hora}:${minuto < 10 ? '0' + minuto : minuto}:${segundo < 10 ? '0' + segundo : segundo}`;
-
-  document.getElementById('relogio').textContent = horaFormatada;
-}
-
-    setInterval(atualizarHora, 1000);
 
 
-    /*************************************/
-    /*************************************/
+          /*
+        var anoNascimento = prompt("Digite o ano de nascimento: ");
 
-          let segundos = 0;
-      const elementoCronometro = document.getElementById('cronometro');
-
-      const idIntervalo = setInterval(atualizarCronometro, 1000);
-
-      function atualizarCronometro() {
-        elementoCronometro.textContent = `Tempo: ${segundos} segundos`;
-        segundos++;
-
-        if (segundos > 10) {
-          clearInterval(idIntervalo);
-        }
+      while(anoNascimento >= 2019){
+        alert("Erro! Ano inválido.");
+        anoNascimento = prompt("Digite o ano de nascimento: ");
       }
 
+      var anoAtual = prompt("Digite o ano atual: ");
+      var idadeFinal = anoAtual - anoNascimento;
+      alert("A pessoa tem " + idadeFinal + " anos.");
 
-      /*
-      for(let i = 0; i < 10; i++){
-        console.log(i)
+      */
+
+      let numeroInicial = prompt("Digite o primeiro número: ");
+      let sinal = prompt("Digite o sinal (+ ou - ou * ou /): ");
+
+      while (sinal != "+" && sinal != "-" && sinal != "*" && sinal != "/") {
+          alert("Erro! Sinal inválido.");
+          sinal = prompt("Digite o sinal (+ ou - ou * ou /): ");
       }
-        */
-       /*
-        const lista = [1, 2, 3, 4, 5, 6, 7];
-         lista.forEach(item => {
-            console.log(item)
-         })
-            */
 
-            /*
-           var arr = ['leonardo', 'joão', 'marcos'];
-           arr.forEach( (value, index) => {
-               console.log(value, index)
-           })
+      let numerofinal = prompt("Digite o segundo número: ");
 
-           */
+      let resultadoFinal = 0;
 
-            /*
-           var nome = prompt('digite seu nome');
-           var idade = prompt('digite sua idade');
+      if (sinal == '+') {
+          resultadoFinal = parseFloat(numeroInicial) + parseFloat(numerofinal);
+      } else if (sinal == '-') {
+          resultadoFinal = parseFloat(numeroInicial) - parseFloat(numerofinal);
+      } else if (sinal == '*') {
+          resultadoFinal = parseFloat(numeroInicial) * parseFloat(numerofinal);
+      } else if (sinal == '/') {
+          resultadoFinal = parseFloat(numeroInicial) / parseFloat(numerofinal);
+      }
 
-           if(idade >= 18){
-            alert('voce esta autorizado a entrar')
-           }else{
-            alert('voce nao tem autorizacao para entrar')
-           }
-
-           console.log('o nome que foi passado é '+nome)
-           console.log('a idade é '+idade)
-           */
-
-           var nome = prompt('digite seu nome');
-           var idade = prompt('digite sua idade');
-
-           if(idade >= 18){ 
-            alert('voce esta autorizado a entrar')    
-           }else{
-            alert('voce nao tem autorizacao para entrar')
-           }
+      alert("O resultado final é: " + resultadoFinal);
+    
             
      
     </script>
