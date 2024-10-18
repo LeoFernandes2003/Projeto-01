@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>JavaScript switch</h2>
+
+    <p id="cronometro"></p>
+    <div id="relogio"></div>
+
+    <script>
+       /* var nome ='leonardo';
+
+        nome ='joão'
+
+        {
+            let endereço ='Rua José barbosa';
+            console.log(endereço)
+        }
+            */
+
+
+            /*
+            var nome = 'Leonardo';
+            var nome2 = 'Fernandes';
+            var idade = 21;
+            var outraVariavel = true;
+            var texto = 'o nome é '+nome+' Ele tem '+idade+ ' anos de idade';
+
+            window.alert(texto)
+
+            */
+        
+        /*
+            //Arrays
+            var nome = ['leonardo', 'lorena', 'marcos']
+            nome.push('Teresa')
+
+            console.log(nome[3])
+
+            */
+
+            var nome ='Leonardo';
+            var idade = 21;
+
+
+            /*
+            if(nome == 'jão'){
+                console.log('verdadeiro')
+            }else{
+                console.log('entramos no else')
+            }
+
+            if(idade > 100){
+                console.log('este numero é maior ou igual a 21')
+            }else if(idade <= 21){
+                console.log('este numero é menor')
+            }
+                */
+
+            /*Sinal de != diferente
+            
+                if(nome != 'leonardo'){
+                console.log('entrou')
+            }   
+
+            Sinal de && e o sinal de ||
+            quando se usa o sinal de && todas as variaveis devem estar corretas na verificação 
+            quando se usa || significa ou, no caso da verificação de duas variaveis se houver somente uma correta ja estará valido
+*/
+           
+/*if(nome != 'Leonardo' || idade == 21){
+                console.log('verdade')
+            }else if(nome == 'Leonardo'){
+                console.log('verdade')
+            
+            }*/
+
+           
+
+/*
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "sua bunda";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+
+*/
+
+
+/*
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+ */
+
+ /*
+        function testes(){
+            console.log('tua mae me adora')
+        }
+
+        function testes2(nome, idade2){
+            console.log('o nome que foi passado é '+nome)
+            console.log('a idade é '+idade2)
+        }
+*/
+
+
+        /*
+        function novoNome(par){
+            if(par == 1){
+            return 'Leonardo';
+            }else{
+                return 'falhou'
+            }
+            
+        }
+
+        var nome = novoNome(10);
+        console.log(nome)
+        */
+        /*
+        var func = function(){
+            alert('sua mãe gosta do grosso')
+        }
+
+        func();
+        */
+       /*
+       (function(){
+        alert('ola mundo')
+       })();
+
+       */
+
+       function atualizarHora() {
+  const dataAtual = new Date();
+  const hora = dataAtual.getHours();
+  const minuto = dataAtual.getMinutes();
+  const segundo = dataAtual.getSeconds();
+
+  const horaFormatada = `${hora < 10 ? '0' + hora : hora}:${minuto < 10 ? '0' + minuto : minuto}:${segundo < 10 ? '0' + segundo : segundo}`;
+
+  document.getElementById('relogio').textContent = horaFormatada;
+}
+
+    setInterval(atualizarHora, 1000);
+
+
+    /*************************************/
+    /*************************************/
+
+          let segundos = 0;
+      const elementoCronometro = document.getElementById('cronometro');
+
+      const idIntervalo = setInterval(atualizarCronometro, 1000);
+
+      function atualizarCronometro() {
+        elementoCronometro.textContent = `Tempo: ${segundos} segundos`;
+        segundos++;
+
+        if (segundos > 10) {
+          clearInterval(idIntervalo);
+        }
+      }
+
+
+      /*
+      for(let i = 0; i < 10; i++){
+        console.log(i)
+      }
+        */
+       /*
+        const lista = [1, 2, 3, 4, 5, 6, 7];
+         lista.forEach(item => {
+            console.log(item)
+         })
+            */
+
+            /*
+           var arr = ['leonardo', 'joão', 'marcos'];
+           arr.forEach( (value, index) => {
+               console.log(value, index)
+           })
+
+           */
+
+            /*
+           var nome = prompt('digite seu nome');
+           var idade = prompt('digite sua idade');
+
+           if(idade >= 18){
+            alert('voce esta autorizado a entrar')
+           }else{
+            alert('voce nao tem autorizacao para entrar')
+           }
+
+           console.log('o nome que foi passado é '+nome)
+           console.log('a idade é '+idade)
+           */
+
+           var nome = prompt('digite seu nome');
+           var idade = prompt('digite sua idade');
+
+           if(idade >= 18){ 
+            alert('voce esta autorizado a entrar')    
+           }else{
+            alert('voce nao tem autorizacao para entrar')
+           }
+            
+     
+    </script>
+
+
+</body>
+</html>
