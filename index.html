@@ -14,7 +14,10 @@
 
     <script>
    
-   /*
+      /*
+      Esta é uma pratica para saber quantos anos uma pessoa tem.
+
+
         let diaNascimento = prompt("Digite o dia do nascimento (DD): ");
         let mesNascimento = prompt("Digite o mês do nascimento (MM): ");
         let anoNascimento = prompt("Digite o ano do nascimento (AAAA): ");
@@ -46,8 +49,9 @@
         } else {
           alert(`A pessoa tem ${idade} anos.`);
         }
+          */
 
-        */
+        
 
 
           /*
@@ -63,6 +67,8 @@
       alert("A pessoa tem " + idadeFinal + " anos.");
 
       */
+
+      /*
 
       let numeroInicial = prompt("Digite o primeiro número: ");
       let sinal = prompt("Digite o sinal (+ ou - ou * ou /): ");
@@ -87,7 +93,54 @@
       }
 
       alert("O resultado final é: " + resultadoFinal);
+      */
     
+
+
+/* Isso são objetos no JavaScript e objetos dentro de arrays.
+        var pessoa = [{
+            nome : "Leonardo",
+            idade: 21,
+            profissao: "Programador"
+        },{
+          nome : "Maria",
+          idade: 18,
+          profissao: "Programadora"
+        }];
+
+        var noticia =[{
+          titulo: "Noticia 1",
+          texto: "Texto da noticia 1",
+          autor: "Autor da noticia 1",
+          imagem: "Imagem da noticia 1"
+        },{
+          titulo: "Noticia 2",
+          texto: "Texto da noticia 2",
+          autor: "Autor da noticia 2",
+          imagem: "Imagem da noticia 2"
+        }]
+
+        alert(noticia[1].imagem)
+
+        */
+       var promprNome = prompt("digite seu nome");
+       var promptIdade = prompt("digite sua idade");
+       var promptProfissao = prompt("digite sua profissão");
+
+        function Pessoa(){
+          this.nome = promprNome,
+          this.idade = promptIdade,
+          this.profissao = promptProfissao,
+          this.falar = function(){
+            document.getElementById("cronometro").innerHTML =("Ola, eu sou o "+this.nome+ " e tenho "+this.idade+" anos e sou "+this.profissao);
+          }
+          
+        }
+
+        var pessoa = new Pessoa();
+        
+
+      pessoa.falar()
             
      
     </script>
