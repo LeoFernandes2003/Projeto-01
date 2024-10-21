@@ -123,24 +123,101 @@
         alert(noticia[1].imagem)
 
         */
-       var promprNome = prompt("digite seu nome");
-       var promptIdade = prompt("digite sua idade");
-       var promptProfissao = prompt("digite sua profissão");
+
+        
+
+        /*
+        Treinamento top sobre orientação a objetos.
+
+        var promprNome = "";
+        var promptIdade = "";
+        var promptProfissao = "";
+
+        while (true) {
+            promprNome = prompt("digite seu nome");
+            promptIdade = prompt("digite sua idade");
+            promptProfissao = prompt("digite sua profissão");
+
+            if (/^[a-zA-Z]+$/.test(promprNome) && /^[a-zA-Z]+$/.test(promptProfissao) && /^\d+$/.test(promptIdade)) {
+                break;
+            } else {
+                alert("Erro: Verifique os dados inseridos");
+            }
+        }
 
         function Pessoa(){
-          this.nome = promprNome,
-          this.idade = promptIdade,
-          this.profissao = promptProfissao,
-          this.falar = function(){
-            document.getElementById("cronometro").innerHTML =("Ola, eu sou o "+this.nome+ " e tenho "+this.idade+" anos e sou "+this.profissao);
-          }
-          
+            this.nome = promprNome,
+            this.idade = promptIdade,
+            this.profissao = promptProfissao,
+            this.falar = function(){
+                document.getElementById("cronometro").innerHTML =("Ola, eu sou o "+this.nome+ " e tenho "+this.idade+" anos e sou "+this.profissao);
+            }
         }
 
         var pessoa = new Pessoa();
+
+        pessoa.falar();
+
+        */
+
+
+        /*
+        
+        Apenas praticando orientação a objetos.
+
+
+        function Animal(nome, peso){
+          if(nome == "undefined"){
+            nome = 'cachorro'
+        }
+      
+
+        if(peso == "undefined"){
+          peso = 10;
+        }
+        
+        this.nome = nome;
+        this.peso = peso;
+      }
         
 
-      pessoa.falar()
+        Animal = new Animal('gato', 5);
+
+        alert(Animal.nome);
+        */
+
+        /*
+        Orientação a objetos utilizando classes e constructors.
+
+        class Animal {
+          constructor(nome){
+            this.nome = nome
+          }
+          printNome(){
+            return this.nome;
+          }
+
+        }
+
+        class Cachorro extends Animal {
+          constructor(nome){
+            super(nome);
+            this.raca = "Labrador";
+          }
+
+          printRaca(){
+            return this.raca
+          }
+        }
+
+
+        cachorro = new Cachorro();
+
+
+        alert(cachorro.printRaca());
+        */
+
+      
             
      
     </script>
