@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*#relogio {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(88, 194, 243);
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+    margin-left: 0;
+}
+
+.animation {
+    // animação para o lugar de início 
+    transform: translateX(100px);
+    transition: transform 1s;
+    animation-direction: normal;
+  }
+  
+  .animation-reverse {
+    // animação de volta para o lugar de início 
+    transform: translateX(0px);
+    transition: transform 1s;
+    animation-direction: reverse;;
+  }
+    */
+
+    body{
+        background-color: black;
+    }
+
+    .backgound{
+    min-height: 100vh;
+    position: relative;
+    }
+
+    .backgound::before{
+        content: "";
+        background-image: url("../img/Demonslayer.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.3;
+    }
+
+    .pai{
+        display: flex; 
+        padding-top: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: relative;
+    }
+
+    .conteudo{
+        width: 33.3%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 5px;
+
+
+    }
+
+    .conteudo h2{
+        font-size: 20px;
+        font-family: sans-serif;
+        color: white;
+    }
+
+    .conteudo h2 span{
+        font-size: 15px;
+        cursor: pointer;
+        font-family: sans-serif;
+        color: white;
+        margin-left: 15px;
+        background-color: rgb(254, 93, 93);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .conteudo p{
+        overflow: hidden;
+        opacity: 0.2;
+        height: 0px;
+        color: white;
+        transition: 1s ;
+        font-family:arial;
+    }
+
+    .mostrar{
+        opacity: 1 !important;
+        height: 150px !important;
+    }
+
+
+    section.demonSlayer{
+    width: 100%;
+    }
+    .imagem{
+    position: relative;
+    width: 40%;
+    height: 400px;
+    margin: 0 auto;
+    }
+
+    .imagem img{
+        position:absolute;
+        width: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: 1s;
+    }
+
+    .botao{
+        text-align: center;
+    }
+
+    .botao-single{
+        margin: 0 8px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+    }
+
+    .active-botao{
+        background-color: rgb(159, 0, 0);
+    }
+
+    footer{
+        padding: 30px 0;
+        background-color: rgb(254, 93, 93);
+    }
+
+    footer p{
+        color: white;
+        text-align: center;
+    }
