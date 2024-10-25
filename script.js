@@ -265,19 +265,19 @@
     //aqui é o codigo para mostrar e ocultar os textos com o botão.
           var spans = document.querySelectorAll(".conteudo span")
 
-          spans.forEach((funcionaSaporra) => {
-          funcionaSaporra.addEventListener("click", () => {
-            let conteudo = funcionaSaporra.closest(".conteudo").querySelector("p")
+          spans.forEach((func) => {
+          func.addEventListener("click", () => {
+            let conteudo = func.closest(".conteudo").querySelector("p")
 
             if(conteudo.classList.contains("mostrar")){
 
               conteudo.classList.remove("mostrar")
-              funcionaSaporra.innerHTML = "Veja mais!"
-              funcionaSaporra.style.color = "white";
+              func.innerHTML = "Veja mais!"
+              func.style.color = "white";
             }else{
               conteudo.classList.add("mostrar")
-              funcionaSaporra.innerHTML = "Veja menos!"
-              funcionaSaporra.style.color = "cyan";
+              func.innerHTML = "Veja menos!"
+              func.style.color = "cyan";
       }
     })
   })

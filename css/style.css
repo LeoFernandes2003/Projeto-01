@@ -67,6 +67,8 @@
         position: relative;
     }
 
+    
+
     .conteudo{
         width: 33.3%;
         align-items: center;
@@ -103,15 +105,21 @@
         font-family:arial;
     }
 
+    section.demonSlayer h2{
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        font-family: sans-serif;
+        padding: 20px 0;
+        
+    }
+
     .mostrar{
         opacity: 1 !important;
-        height: 150px !important;
+        height: 130px !important;
     }
 
 
-    section.demonSlayer{
-    width: 100%;
-    }
     .imagem{
     position: relative;
     width: 40%;
@@ -141,6 +149,7 @@
         border-radius: 50%;
         background-color: white;
         display: inline-block;
+        margin-top: 5px;
     }
 
     .active-botao{
@@ -155,4 +164,17 @@
     footer p{
         color: white;
         text-align: center;
+    }
+
+    @media screen and (max-width: 850px){
+        .pai{
+            flex-direction: column;
+        }
+        .conteudo{
+            width: 100%;
+            margin-top: 15px;
+        }
+        .imagem{
+            width: 100%;
+        }
     }
