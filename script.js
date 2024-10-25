@@ -306,3 +306,62 @@
     })
   })
         
+
+  /*
+  Bloke Scope Teste
+  {
+    let nome3 = "yago";
+    let operacao = function(){
+      console.log("Ola " + nome3);
+    }
+    operacao();
+  }
+  
+  */
+
+  
+
+/*Praticando Destructure
+
+const arr = ['leonardo', 'joana', 'lorena', 'zeca'];
+const [a,b,...c] = arr
+
+alert(c[1])
+*/
+
+/*
+function testes(...numero){
+  console.log(numero[0][0]);
+}
+
+testes([1,2,3,4,5,6])
+
+*/
+
+/*
+Praticando promises.
+
+function teste(){
+  return new Promise((resolve, reject)=>{
+    setTimeout(() => {
+      const erro = false;
+    if(erro){
+      reject("erro...")
+    }else{
+      resolve("deu certo")
+    }
+    },5000)
+    
+  })
+}
+
+async function teste2(){
+  await teste().then(function(res){
+    alert(res);
+  })
+  alert("Olá")
+}
+
+teste2();
+
+*/
